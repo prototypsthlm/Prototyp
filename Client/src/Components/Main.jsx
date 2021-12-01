@@ -45,9 +45,13 @@ function Main() {
           </tr>
         </thead>
         <tbody>
-          {files.map((item) => {
-            return <FileItem file={item} />;
-          })}
+          {files ? (
+            files.map((item) => {
+              return <FileItem file={item} setFiles={setFiles} />;
+            })
+          ) : (
+            <h1>LOADING</h1>
+          )}
         </tbody>
       </table>
       <button

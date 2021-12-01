@@ -18,11 +18,11 @@ apiService.getAllFiles = () => {
     .catch((err) => console.log(err));
 };
 
-apiService.deleteFile = (id) => {
+apiService.deleteFile = (obj) => {
   return fetch(`${BASE_URL}/deletefile`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(id),
+    body: JSON.stringify(obj),
   })
     .then((res) => res.json())
     .catch((err) => console.log(err));
