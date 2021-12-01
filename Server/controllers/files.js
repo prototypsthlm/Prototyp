@@ -6,7 +6,6 @@ exports.addFile = async (req, res) => {
     const result = await File.create(req.body);
     res.status(201);
     res.json(result);
-    // console.log(req.body);
   } catch (error) {
     console.log(error);
   }
@@ -25,7 +24,6 @@ exports.getAllFiles = async (req, res) => {
 exports.deleteFile = async (req, res) => {
   try {
     const { id } = req.body;
-
     const result = await File.findOneAndDelete({
       _id: id,
     });
