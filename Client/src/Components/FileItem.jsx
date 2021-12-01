@@ -7,12 +7,6 @@ import jpgImg from '../images/jpg.png';
 import xmlImg from '../images/xml.png';
 
 function FileItem({ file, setFiles }) {
-  // const [type, setType] = useState(null);
-
-  // useEffect(() => {
-  //   console.log(typeof file.filename);
-  // }, []);
-
   async function handleClick() {
     await apiService.deleteFile({ id: file._id });
     setFiles((previous) => {
@@ -25,8 +19,8 @@ function FileItem({ file, setFiles }) {
   }
 
   return (
-    <tr>
-      <th>
+    <tr className="row">
+      <th className="item-detail">
         {file.filename.includes('.pdf') ? (
           <img src={pdfImg} className="type-icon" />
         ) : null}
@@ -37,12 +31,14 @@ function FileItem({ file, setFiles }) {
           <img src={jpgImg} className="type-icon" />
         ) : null}
       </th>
-      <th>{file.filename.slice(12)}</th>
-      <th>{file.description}</th>
-      <th>{file.uploadedBy}</th>
-      <th>{moment(file.date).format('MMM Do YY')}</th>
-      <th>
-        <button onClick={handleClick}>DELETE</button>
+      <th className="item-detail">{file.filename.slice(12)}</th>
+      <th className="item-detail">{file.description}</th>
+      <th className="item-detail">{file.uploadedBy}</th>
+      <th className="item-detail">{moment(file.date).format('MMM Do YY')}</th>
+      <th className="item-detail">
+        <button id="delete-btn" onClick={handleClick}>
+          DELETE
+        </button>
       </th>
     </tr>
   );

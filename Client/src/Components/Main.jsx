@@ -27,7 +27,6 @@ function Main() {
           borderStyle: 'solid',
           width: '500px',
         }}
-        // style="border-collapse: collapse;"
       >
         <thead
           style={{
@@ -47,7 +46,9 @@ function Main() {
         <tbody>
           {files ? (
             files.map((item) => {
-              return <FileItem file={item} setFiles={setFiles} />;
+              return (
+                <FileItem key={item._id} file={item} setFiles={setFiles} />
+              );
             })
           ) : (
             <h1>LOADING</h1>
@@ -59,7 +60,6 @@ function Main() {
           setShowForm(true);
         }}
       >
-        {' '}
         UPLOAD
       </button>
     </div>
