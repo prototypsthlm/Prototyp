@@ -13,7 +13,7 @@ function Main() {
       console.log(data);
       setFiles(data);
     });
-  }, []);
+  }, [showForm]);
 
   return (
     <div className="main">

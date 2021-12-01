@@ -36,7 +36,7 @@ function FileItem({ file, setFiles }) {
       <th className="item-detail">{file.uploadedBy}</th>
       <th className="item-detail">{moment(file.date).format('MMM Do YY')}</th>
       <th className="item-detail">
-        <button id="delete-btn" onClick={handleClick}>
+        <button className="delete-btn" onClick={handleClick}>
           DELETE
         </button>
       </th>
