@@ -14,7 +14,9 @@ exports.addFile = async (req, res) => {
 
 exports.getAllFiles = async (req, res) => {
   try {
-    console.log('get all files  route');
+    const result = await File.find({});
+    res.status(200);
+    res.send(result);
   } catch (error) {
     console.log(error);
   }
@@ -22,7 +24,13 @@ exports.getAllFiles = async (req, res) => {
 
 exports.deleteFile = async (req, res) => {
   try {
-    console.log('delete file route ');
+    const { id } = req.body;
+
+    const result = await File.findOneAndDelete({
+      _id: id,
+    });
+    res.status(201);
+    res.end();
   } catch (error) {
     console.log(error);
   }

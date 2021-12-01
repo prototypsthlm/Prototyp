@@ -10,6 +10,6 @@ router.post('/addfile', files.addFile);
 router.get('/getallfiles', files.getAllFiles);
 
 //delete a file
-router.delete('/deletefile', files.deleteFile);
+router.post('/deletefile', files.deleteFile);
 
 module.exports = router;
