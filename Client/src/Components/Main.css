@@ -1,0 +1,30 @@
+.main {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+table {
+  /* border: 1px solid black; */
+}
+
+.table-header {
+  /* border: 1px solid black; */
+
+  /* background-color: whitesmoke; */
+  color: red;
+}
+
+.header-item {
+  /* border: 1px solid black; */
+}
+
+button {
+  margin-top: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 10px;
+}

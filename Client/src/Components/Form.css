@@ -1,0 +1,14 @@
+.form-container {
+  width: 50%;
+  height: 50%;
+  background-color: whitesmoke;
+  position: absolute;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
