@@ -37,7 +37,7 @@ function Main() {
           }}
         >
           <tr className="table-header">
-            <th className="header-item">Icon</th>
+            <th className="header-item">Type</th>
             <th className="header-item">Filename</th>
             <th className="header-item">Description</th>
             <th className="header-item">Uploaded By</th>
